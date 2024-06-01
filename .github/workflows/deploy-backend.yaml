@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy-host-1:
-    runs-on: crud-products
+    runs-on: BastionProyecto
     steps:
       - uses: actions/checkout@v3
 
@@ -20,7 +20,7 @@ jobs:
         working-directory: Backend
         run: |
           npm install
-          echo MONGO_URL="mongodb+srv://yefrin200:123miumg@yefrincluster.n3re7rf.mongodb.net/CRUD_IS?retryWrites=true&w=majority" > .env
+          echo MONGO_URL="mongodb+srv://maguirrem6:ef4311q6g4y0egsT@aws-tier.8p32w3v.mongodb.net/CRUD_IS?retryWrites=true&w=majority" > .env
 
       - name: Set up SSH key
         run: |
@@ -45,7 +45,7 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST1 }}
 
   deploy-host-2:
-    runs-on: crud-products
+    runs-on: BastionProyecto
     steps:
       - uses: actions/checkout@v3
 
@@ -58,7 +58,7 @@ jobs:
         working-directory: Backend
         run: |
           npm install
-          echo MONGO_URL="mongodb+srv://yefrin200:123miumg@yefrincluster.n3re7rf.mongodb.net/CRUD_IS?retryWrites=true&w=majority" > .env
+          echo MONGO_URL="mongodb+srv://maguirrem6:ef4311q6g4y0egsT@aws-tier.8p32w3v.mongodb.net/CRUD_IS?retryWrites=true&w=majority"  > .env
 
       - name: Set up SSH key
         run: |
